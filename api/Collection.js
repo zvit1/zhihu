@@ -8,7 +8,8 @@
  */
 'use strict';
 
-const {cheerio, request, Promise, util: url} = require('../config/commonModules');
+const util = require('url')
+const {cheerio, request, Promise} = require('../config/commonModules');
 
 const config = require('../config');
 const API = require('../config/api');
