@@ -35,7 +35,7 @@ function getItems(body) {
       question: {
         id: parseInt(href.match(/\d*?$/)[0]),
         title: h2.text(),
-        url: config.zhihu + h2.attr('href'),
+        url: h2.attr('href').indexOf('https://') === -1 ? config.zhihu + h2.attr('href') : h2.attr('href'),
       },
       user: {
         username: user.find('a').text(),
